@@ -30,6 +30,7 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="15dp"
                     android:background="@drawable/bgcardhome"
+                    app:cardCornerRadius="7dp"
                     app:cardElevation="15dp">
 
                     <LinearLayout
@@ -58,6 +59,7 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="15dp"
                     android:background="@drawable/bgcardhome"
+                    app:cardCornerRadius="7dp"
                     app:cardElevation="15dp">
 
                     <LinearLayout
