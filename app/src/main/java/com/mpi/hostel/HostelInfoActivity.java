@@ -10,5 +10,9 @@ public class HostelInfoActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hostel_info);
+
+        setTitle("Hostel Info");
+        getSupportActionBar().setHomeButtonEnabled(true);
+
     }
 }
