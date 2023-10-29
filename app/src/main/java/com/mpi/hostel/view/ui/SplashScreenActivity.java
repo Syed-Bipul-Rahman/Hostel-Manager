@@ -1,9 +1,11 @@
-package com.mpi.hostel;
+package com.mpi.hostel.view.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+
+import com.mpi.hostel.R;
 
 public class SplashScreenActivity extends AppCompatActivity {
     private static final int SPLASH_DURATION = 3000;

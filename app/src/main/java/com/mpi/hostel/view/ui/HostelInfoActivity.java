@@ -1,10 +1,14 @@
-package com.mpi.hostel;
+package com.mpi.hostel.view.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 
+import com.mpi.hostel.R;
+
 public class HostelInfoActivity extends AppCompatActivity {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -12,7 +16,10 @@ public class HostelInfoActivity extends AppCompatActivity {
         setContentView(R.layout.activity_hostel_info);
 
         setTitle("Hostel Info");
-        getSupportActionBar().setHomeButtonEnabled(true);
+//        getActionBar().setHomeButtonEnabled(true);
+       // getActionBar().setDefaultDisplayHomeAsUpEnabled(true);
+
+
 
     }
 }
