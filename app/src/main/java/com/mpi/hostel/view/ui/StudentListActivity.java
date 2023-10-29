@@ -29,6 +29,8 @@ public class StudentListActivity extends AppCompatActivity {
         View view = binding.getRoot();
         setContentView(view);
 
+        getSupportActionBar().setTitle("Student List");
+
         binding.studentsRecycler.setLayoutManager(new LinearLayoutManager(this));
 
 
