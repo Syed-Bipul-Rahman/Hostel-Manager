@@ -39,7 +39,7 @@ public class StudentListActivity extends AppCompatActivity {
             @Override
             public void onChanged(List<Students> students) {
 //                Log.d("change", students.get(1).getFatherphone());
-              Toast.makeText(StudentListActivity.this, students.get(1).getPhone().toString(), Toast.LENGTH_SHORT).show();
+    //          Toast.makeText(StudentListActivity.this, students.get(1).getPhone().toString(), Toast.LENGTH_SHORT).show();
                 binding.progressBar.setVisibility(View.GONE);
                 adapter = new StudentsAdapter(StudentListActivity.this, students);
                 binding.studentsRecycler.setAdapter(adapter);
