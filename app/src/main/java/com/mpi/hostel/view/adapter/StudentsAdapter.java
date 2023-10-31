@@ -88,4 +88,12 @@ public class StudentsAdapter extends RecyclerView.Adapter<StudentsAdapter.Studen
             this.studenRecyclerLayoutBinding = studenRecyclerLayoutBinding;
         }
     }
+
+
+    public void filterlist(List<Students> filterlist) {
+
+        results = filterlist;
+        notifyDataSetChanged();
+
+    }
 }
