@@ -1,20 +1,21 @@
 package com.mpi.hostel.service.network;
 
+import com.mpi.hostel.service.model.AllNotice;
 import com.mpi.hostel.service.model.AllStudents;
-import com.mpi.hostel.service.model.FullResults;
+import com.mpi.hostel.service.model.Notice;
 
 import retrofit2.Call;
 import retrofit2.http.GET;
-import retrofit2.http.Url;
 
 public interface ApiService {
+
+    //student list
     @GET("all-students.php")
     Call<AllStudents> getAllStudentsLists();
 
+//all notice
+    @GET("notice.php")
+    Call<AllNotice> getAllNotice();
 
-  //  individualResult?roll=476732&regulation=2016
 
-
-    @GET()
-    Call<FullResults> getFullResults(@Url String url);
 }

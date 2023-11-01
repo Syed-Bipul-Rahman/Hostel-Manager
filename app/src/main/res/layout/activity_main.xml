@@ -18,7 +18,6 @@
             android:orientation="vertical">
 
 
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -26,6 +25,7 @@
                 android:weightSum="2">
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/hostelStaff"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="15dp"
@@ -92,6 +92,7 @@
                 android:weightSum="2">
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/mealHistory"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="15dp"
@@ -109,12 +110,12 @@
                         <ImageView
                             android:layout_width="50dp"
                             android:layout_height="50dp"
-                            android:src="@drawable/ic_baseline_how_to_vote_24" />
+                            android:src="@drawable/ic_baseline_history_24" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Vote Managers"
+                            android:text="Meal History"
                             android:textColor="@color/black" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
@@ -158,6 +159,7 @@
                 android:weightSum="2">
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/notice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="15dp"
@@ -175,12 +177,12 @@
                         <ImageView
                             android:layout_width="50dp"
                             android:layout_height="50dp"
-                            android:src="@drawable/resultview" />
+                            android:src="@drawable/ic_outline_notifications_24" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="View Result"
+                            android:text="View Notice"
                             android:textColor="@color/black" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
@@ -216,6 +218,7 @@
 
 
             </LinearLayout>
+
             <LinearLayout
 
                 android:layout_width="match_parent"
@@ -223,34 +226,7 @@
                 android:orientation="horizontal"
                 android:weightSum="2">
 
-                <androidx.cardview.widget.CardView
 
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="15dp"
-                    android:background="@drawable/bgcardhome"
-                    app:cardCornerRadius="7dp"
-                    app:cardElevation="15dp">
-
-                    <LinearLayout
-                        android:layout_width="150dp"
-                        android:layout_height="150dp"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:src="@drawable/ic_baseline_search_24" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Search Student"
-                            android:textColor="@color/black" />
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/sentinfo"
@@ -280,7 +256,34 @@
                             android:textColor="@color/black" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/aboutapp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:background="@drawable/bgcardhome"
+                    app:cardCornerRadius="7dp"
+                    app:cardElevation="15dp">
 
+                    <LinearLayout
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/ic_baseline_code_24" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="App Info"
+                            android:textColor="@color/black" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
 
             </LinearLayout>
 
