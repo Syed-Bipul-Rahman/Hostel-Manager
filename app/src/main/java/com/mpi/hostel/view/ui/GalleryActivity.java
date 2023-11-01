@@ -44,23 +44,22 @@ public class GalleryActivity extends AppCompatActivity {
         ArrayList<SlideModel> imageList = new ArrayList<>();
 
 
+        imageList.add(new SlideModel(R.drawable.hostel, ScaleTypes.CENTER_CROP));
+        imageList.add(new SlideModel(R.drawable.hosteltwo, ScaleTypes.CENTER_CROP));
+        imageList.add(new SlideModel(R.drawable.hostelsite, ScaleTypes.CENTER_CROP));
         imageList.add(new SlideModel(R.drawable.imageone, ScaleTypes.CENTER_CROP));
         imageList.add(new SlideModel(R.drawable.imagetwo, ScaleTypes.CENTER_CROP));
-        imageList.add(new SlideModel(R.drawable.a, ScaleTypes.CENTER_CROP));
+
 
 
         imageSlider.setImageList(imageList);
 
 
+        imageGallery.add(new GalleryModel(R.drawable.hostel));
+        imageGallery.add(new GalleryModel(R.drawable.hosteltwo));
+        imageGallery.add(new GalleryModel(R.drawable.hostelsite));
         imageGallery.add(new GalleryModel(R.drawable.imageone));
-        imageGallery.add(new GalleryModel(R.drawable.a));
-        imageGallery.add(new GalleryModel(R.drawable.imageone));
-        imageGallery.add(new GalleryModel(R.drawable.imageone));
-        imageGallery.add(new GalleryModel(R.drawable.a));
-        imageGallery.add(new GalleryModel(R.drawable.imageone));
-        imageGallery.add(new GalleryModel(R.drawable.imageone));
-        imageGallery.add(new GalleryModel(R.drawable.a));
-        imageGallery.add(new GalleryModel(R.drawable.imageone));
+        imageGallery.add(new GalleryModel(R.drawable.imagetwo));
 
         galleryAdapter.notifyDataSetChanged();
 

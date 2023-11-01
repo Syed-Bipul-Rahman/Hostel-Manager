@@ -20,6 +20,7 @@ ActivityLoginBinding binding;
         View view=binding.getRoot();
         setContentView(view);
 
+        setTitle("Login");
 
         //navigate to register page
         binding.register.setOnClickListener(v->{
