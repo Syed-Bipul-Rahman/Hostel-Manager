@@ -55,6 +55,13 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, NoticeActivity.class));
             }
         });
+        //sending to admininfo
+        binding.hostelStaff.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, AdminActivity.class));
+            }
+        });
 
 
     }
