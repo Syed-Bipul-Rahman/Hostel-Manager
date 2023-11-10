@@ -20,6 +20,7 @@
             android:src="@drawable/avater" />
 
         <TextView
+            android:id="@+id/titleofadmin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
@@ -37,11 +38,12 @@
             android:id="@+id/hostelSuparName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
             android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
             android:text="Hostel Supar name"
             android:textColor="@color/black"
             android:textSize="22sp" />
+
         <TextView
             android:id="@+id/hostelSuparPhone"
             android:layout_width="wrap_content"

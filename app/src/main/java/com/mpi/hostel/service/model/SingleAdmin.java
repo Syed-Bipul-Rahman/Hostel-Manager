@@ -13,18 +13,16 @@ public class SingleAdmin {
     @SerializedName("hall_supar_phone")
     @Expose
     private String hallSuparPhone;
-    @SerializedName("assistent_hall_supar")
+    @SerializedName("position")
     @Expose
-    private String assistentHallSupar;
-    @SerializedName("assistent_hall_supar_phone")
-    @Expose
-    private String assistentHallSuparPhone;
-    @SerializedName("office_assistent")
-    @Expose
-    private String officeAssistent;
-    @SerializedName("office_assitent_phone")
-    @Expose
-    private String officeAssitentPhone;
+    private String position;
+
+    public SingleAdmin(String id, String hallSuparName, String hallSuparPhone, String position) {
+        this.id = id;
+        this.hallSuparName = hallSuparName;
+        this.hallSuparPhone = hallSuparPhone;
+        this.position = position;
+    }
 
     public String getId() {
         return id;
@@ -50,35 +48,11 @@ public class SingleAdmin {
         this.hallSuparPhone = hallSuparPhone;
     }
 
-    public String getAssistentHallSupar() {
-        return assistentHallSupar;
+    public String getPosition() {
+        return position;
     }
 
-    public void setAssistentHallSupar(String assistentHallSupar) {
-        this.assistentHallSupar = assistentHallSupar;
-    }
-
-    public String getAssistentHallSuparPhone() {
-        return assistentHallSuparPhone;
-    }
-
-    public void setAssistentHallSuparPhone(String assistentHallSuparPhone) {
-        this.assistentHallSuparPhone = assistentHallSuparPhone;
-    }
-
-    public String getOfficeAssistent() {
-        return officeAssistent;
-    }
-
-    public void setOfficeAssistent(String officeAssistent) {
-        this.officeAssistent = officeAssistent;
-    }
-
-    public String getOfficeAssitentPhone() {
-        return officeAssitentPhone;
-    }
-
-    public void setOfficeAssitentPhone(String officeAssitentPhone) {
-        this.officeAssitentPhone = officeAssitentPhone;
+    public void setPosition(String position) {
+        this.position = position;
     }
 }

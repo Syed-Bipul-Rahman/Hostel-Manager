@@ -35,6 +35,7 @@ public class HostelSuparAdapter extends RecyclerView.Adapter<HostelSuparAdapter.
     public void onBindViewHolder(@NonNull HostelSuparAdapter.HostelViewholder holder, int position) {
         holder.adminRecyclerLayoutBinding.hostelSuparName.setText(singleAdminList.get(position).getHallSuparName());
         holder.adminRecyclerLayoutBinding.hostelSuparPhone.setText(singleAdminList.get(position).getHallSuparPhone());
+        holder.adminRecyclerLayoutBinding.titleofadmin.setText(singleAdminList.get(position).getPosition());
     }
 
     @Override

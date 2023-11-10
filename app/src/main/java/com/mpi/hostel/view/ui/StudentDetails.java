@@ -51,13 +51,15 @@ public class StudentDetails extends AppCompatActivity {
         binding.studentRegistration.setText(studentRegistration);
         binding.studentSession.setText(studentSession);
 
-
         String split[] = studentName.split(" ");
-
-        String firstname = split[0];
-        String secondname = split[1];
-        setTitle(firstname+" "+secondname);
-
+        if (split.length >= 2) {
+            String firstname = split[0];
+            String secondname = split[1];
+            setTitle(firstname + " " + secondname);
+        } else {
+            String firstname = split[0];
+            setTitle(firstname);
+        }
 
     }
 }

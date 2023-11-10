@@ -45,7 +45,13 @@ public class MainActivity extends AppCompatActivity {
         binding.cardviewdashboard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, LoginActivity.class));
+
+                if (getSharedPreferences("login_pref", MODE_PRIVATE).getBoolean("is_logged_in", false))
+                    startActivity(new Intent(MainActivity.this, DashboardActivity.class));
+                else {
+                    startActivity(new Intent(MainActivity.this, LoginActivity.class));
+                }
+
             }
         });
         //sending to notice
