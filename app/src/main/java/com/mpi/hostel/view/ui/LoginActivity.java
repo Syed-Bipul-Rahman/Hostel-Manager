@@ -43,6 +43,13 @@ public class LoginActivity extends AppCompatActivity {
         binding.login.setOnClickListener(v -> {
             String username = binding.username.getText().toString();
             String password = binding.password.getText().toString();
+
+            if (username.isEmpty()||password.isEmpty()){
+                binding.seterror.setVisibility(View.VISIBLE);
+                binding.loading.setVisibility(View.GONE);
+                return;
+            }
+
             binding.loading.setVisibility(View.VISIBLE);
             loginLiveData = loginViewModel.loginUser(username, password);
             loginLiveData.observe(this, loginModel -> {
