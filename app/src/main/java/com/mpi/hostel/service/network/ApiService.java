@@ -28,8 +28,8 @@ public interface ApiService {
 
     @FormUrlEncoded
     @POST("login.php")
-    Call<LoginModel> getLogin(@Field("roll") String roll,
-                              @Field("registration") String registration);
+    Call<LoginModel> getLogin(@Field("phone") String phone,
+                              @Field("password") String password);
 
     @FormUrlEncoded
     @POST("register.php")

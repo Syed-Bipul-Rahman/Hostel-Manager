@@ -24,6 +24,10 @@ public class LoginActivity extends AppCompatActivity {
     private static final String PREF_NAME = "login_pref";
     private static final String IS_LOGGED_IN = "is_logged_in";
 
+    //sting data
+    String userName, userPhone, isAdmin, isVerified, authToken;
+    Integer userId;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,8 +53,19 @@ public class LoginActivity extends AppCompatActivity {
                         sharedPreferences = getSharedPreferences(PREF_NAME, MODE_PRIVATE);
                         SharedPreferences.Editor editor = sharedPreferences.edit();
                         editor.putBoolean(IS_LOGGED_IN, true);
-                        editor.apply();
+                        //loginModel.getLoginData().getName();
 
+                        //save logged user data into sharedpreferences
+                        userName = loginModel.getLoginData().getName();
+                        userPhone = loginModel.getLoginData().getPhone();
+                        userId = loginModel.getLoginData().getUid();
+
+                        editor.putString("USER_NAME", userName);
+                        editor.putString("USER_PHONE", userPhone);
+                        editor.putInt("USER_ID", userId);
+
+                        editor.apply();
+                        //    Toast.makeText(this, ""+loginModel.getLoginData().getName(), Toast.LENGTH_SHORT).show();
                         startActivity(new Intent(getApplicationContext(), DashboardActivity.class));
                         // Remove the observer after successful login
                         loginLiveData.removeObservers(this);

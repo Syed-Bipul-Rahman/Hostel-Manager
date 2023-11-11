@@ -1,5 +1,6 @@
 package com.mpi.hostel.view.ui;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 
@@ -9,6 +10,8 @@ import com.mpi.hostel.databinding.ActivityDashboardBinding;
 
 public class DashboardActivity extends AppCompatActivity {
     ActivityDashboardBinding binding;
+    String userName, userPhone;
+    Integer userId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,6 +21,16 @@ public class DashboardActivity extends AppCompatActivity {
         View view = binding.getRoot();
         setContentView(view);
         setTitle("Dashboard");
+
+//set user data into dashboar  from sharedPreferences
+        SharedPreferences sharedPreferences = getSharedPreferences("login_pref", MODE_PRIVATE);
+        userName = sharedPreferences.getString("USER_NAME", "");
+        userPhone = sharedPreferences.getString("USER_PHONE", "");
+        userId = sharedPreferences.getInt("USER_ID", 0);
+
+        binding.username.setText(userName);
+        binding.userPhone.setText(userPhone);
+
 
     }
 }

@@ -13,7 +13,6 @@ import androidx.lifecycle.ViewModelProvider;
 import com.mpi.hostel.R;
 import com.mpi.hostel.databinding.ActivityRegisterBinding;
 import com.mpi.hostel.service.model.LoginModel;
-import com.mpi.hostel.viewModel.LoginViewModel;
 import com.mpi.hostel.viewModel.RegisterUserViewModel;
 
 public class RegisterActivity extends AppCompatActivity {
