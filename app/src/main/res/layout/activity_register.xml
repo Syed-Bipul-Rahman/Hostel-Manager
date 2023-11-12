@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -28,158 +29,189 @@
                 android:src="@drawable/logo" />
 
 
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:text="Register as Student"
-                android:textStyle="bold"
                 android:textColor="@color/purple_700"
-                android:textSize="32sp" />
+                android:textSize="32sp"
+                android:textStyle="bold" />
 
-            <EditText
-                android:id="@+id/fullName"
+
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="25dp"
-                android:background="@drawable/input_field_bg"
-                android:drawableLeft="@drawable/ic_outline_person_24"
                 android:hint="Full Name"
-                android:inputType="textPersonName"
-                android:minHeight="48dp"
-                android:padding="10dp"
-                android:selectAllOnFocus="true" />
+                android:padding="10dp">
 
-            <EditText
-                android:id="@+id/roll"
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/fullName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:inputType="textPersonName"
+                    android:minHeight="48dp"
+                    android:selectAllOnFocus="true" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/input_field_bg"
-                android:drawableLeft="@drawable/ic_baseline_numbers_24"
                 android:hint="Roll No"
-                android:inputType="numberDecimal"
-                android:minHeight="48dp"
-                android:padding="10dp"
-                android:selectAllOnFocus="true" />
+                android:padding="10dp">
 
-            <EditText
-                android:id="@+id/registrationNo"
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/roll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:minHeight="48dp"
+                    android:selectAllOnFocus="true" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/input_field_bg"
-                android:drawableLeft="@drawable/ic_baseline_numbers_24"
-                android:hint="Registration No"
-                android:inputType="numberDecimal"
-                android:minHeight="48dp"
-                android:padding="10dp"
-                android:selectAllOnFocus="true" />
+                android:hint="Registration"
+                android:padding="10dp">
 
-            <EditText
-                android:id="@+id/session"
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/registrationNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:minHeight="48dp"
+                    android:selectAllOnFocus="true" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/input_field_bg"
-                android:drawableLeft="@drawable/ic_baseline_numbers_24"
                 android:hint="Session"
-                android:inputType="numberDecimal"
-                android:minHeight="48dp"
-                android:padding="10dp"
-                android:selectAllOnFocus="true" />
+                android:padding="10dp">
 
-            <EditText
-                android:id="@+id/sdudentphoneNo"
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/session"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:minHeight="48dp"
+                    android:selectAllOnFocus="true" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/input_field_bg"
-                android:drawableLeft="@drawable/ic_baseline_numbers_24"
                 android:hint="Phone No"
-                android:inputType="numberDecimal"
-                android:minHeight="48dp"
-                android:padding="10dp"
-                android:selectAllOnFocus="true" />
+                android:padding="10dp">
 
-            <EditText
-                android:id="@+id/fatherName"
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/sdudentphoneNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:minHeight="48dp"
+                    android:selectAllOnFocus="true" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/input_field_bg"
-                android:drawableLeft="@drawable/ic_outline_person_24"
                 android:hint="Father Name"
-                android:inputType="textPersonName"
-                android:minHeight="48dp"
-                android:padding="10dp"
-                android:selectAllOnFocus="true" />
+                android:padding="10dp">
 
-            <EditText
-                android:id="@+id/fatehrPhoneNo"
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/fatherName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:minHeight="48dp"
+                    android:selectAllOnFocus="true" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/input_field_bg"
-                android:drawableLeft="@drawable/ic_baseline_numbers_24"
                 android:hint="Father Phone No"
-                android:inputType="numberDecimal"
-                android:minHeight="48dp"
-                android:padding="10dp"
-                android:selectAllOnFocus="true" />
+                android:padding="10dp">
 
-            <EditText
-                android:id="@+id/motherName"
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/fatehrPhoneNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:minHeight="48dp"
+                    android:selectAllOnFocus="true" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/input_field_bg"
-                android:drawableLeft="@drawable/ic_outline_person_24"
                 android:hint="Mother Name"
-                android:inputType="textPersonName"
-                android:minHeight="48dp"
-                android:padding="10dp"
-                android:selectAllOnFocus="true" />
+                android:padding="10dp">
 
-            <EditText
-                android:id="@+id/upazila"
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/motherName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:minHeight="48dp"
+                    android:selectAllOnFocus="true" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/input_field_bg"
-                android:drawableLeft="@drawable/ic_outline_location_on_24"
                 android:hint="Upazila"
-                android:inputType="textPersonName"
-                android:minHeight="48dp"
-                android:padding="10dp"
-                android:selectAllOnFocus="true" />
+                android:padding="10dp">
 
-            <EditText
-                android:id="@+id/district"
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/upazila"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:minHeight="48dp"
+                    android:selectAllOnFocus="true" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/input_field_bg"
-                android:drawableLeft="@drawable/ic_outline_location_on_24"
                 android:hint="Home District"
-                android:inputType="textPersonName"
-                android:minHeight="48dp"
-                android:padding="10dp"
-                android:selectAllOnFocus="true" />
+                android:padding="10dp">
 
-            <EditText
-                android:id="@+id/password"
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/district"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:minHeight="48dp"
+                    android:selectAllOnFocus="true" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/input_field_bg"
-                android:drawableLeft="@drawable/ic_baseline_visibility_24"
-                android:hint="password"
-                android:inputType="textPassword"
-                android:minHeight="48dp"
+                android:hint="Password"
                 android:padding="10dp"
-                android:selectAllOnFocus="true" />
+                app:passwordToggleEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:inputType="textPassword"
+                    android:minHeight="48dp"
+                    android:selectAllOnFocus="true" />
+
+            </com.google.android.material.textfield.TextInputLayout>
 
             <Button
                 android:id="@+id/submitdataBtn"
