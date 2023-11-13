@@ -34,11 +34,9 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         //sending to gallery
-        binding.gallerycardview.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+        binding.gallerycardview.setOnClickListener(v-> {
+
                 startActivity(new Intent(MainActivity.this, GalleryActivity.class));
-            }
         });
         //sending to dashboard
         binding.cardviewdashboard.setOnClickListener(new View.OnClickListener() {

@@ -60,8 +60,10 @@ public class RegisterActivity extends AppCompatActivity {
 
         //register user
         binding.submitdataBtn.setOnClickListener(v -> {
-            //get data from edit text
 
+            binding.progressBarShow.setVisibility(View.VISIBLE);
+
+            //get data from edit text
             name = binding.fullName.getText().toString();
             roll = binding.roll.getText().toString();
             registration = binding.registrationNo.getText().toString();
@@ -87,6 +89,7 @@ public class RegisterActivity extends AppCompatActivity {
                         .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int id) {
                                 // Do something if the user clicks OK
+                                binding.progressBarShow.setVisibility(View.GONE);
                                 dialog.dismiss();
                             }
                         });
@@ -115,6 +118,7 @@ public class RegisterActivity extends AppCompatActivity {
                                     .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                                         public void onClick(DialogInterface dialog, int id) {
                                             // Do something if the user clicks OK
+                                            binding.progressBarShow.setVisibility(View.GONE);
                                             dialog.dismiss();
                                         }
                                     });
