@@ -1,9 +1,9 @@
 package com.mpi.hostel.view.ui;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -22,8 +22,8 @@ public class MainActivity extends AppCompatActivity {
 
 
         //sending to hostel info
-        binding.sentinfo.setOnClickListener(v->{
-          //  Toast.makeText(this, "sending..", Toast.LENGTH_SHORT).show();
+        binding.sentinfo.setOnClickListener(v -> {
+            //  Toast.makeText(this, "sending..", Toast.LENGTH_SHORT).show();
             startActivity(new Intent(MainActivity.this, HostelInfoActivity.class));
         });
         //sending to studentllist
@@ -44,8 +44,11 @@ public class MainActivity extends AppCompatActivity {
         binding.cardviewdashboard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //check user is already login or not
+                SharedPreferences sharedPreferences = getSharedPreferences("login_pref", MODE_PRIVATE);
+                String storedUserName = sharedPreferences.getString("USER_NAME", "");
 
-                if (getSharedPreferences("login_pref", MODE_PRIVATE).getBoolean("is_logged_in", false))
+                if (!storedUserName.isEmpty())
                     startActivity(new Intent(MainActivity.this, DashboardActivity.class));
                 else {
                     startActivity(new Intent(MainActivity.this, LoginActivity.class));
@@ -69,15 +72,15 @@ public class MainActivity extends AppCompatActivity {
         });
 
 //sending to about 
-        binding.aboutapp.setOnClickListener(v->{
-       //     Toast.makeText(this, "sending............", Toast.LENGTH_SHORT).show();
+        binding.aboutapp.setOnClickListener(v -> {
+            //     Toast.makeText(this, "sending............", Toast.LENGTH_SHORT).show();
             startActivity(new Intent(MainActivity.this, AboutDeveloperActivity.class));
-        
+
         });
 
         //navigate to register
 
-        binding.applyasStuent.setOnClickListener(v->{
+        binding.applyasStuent.setOnClickListener(v -> {
             //     Toast.makeText(this, "sending............", Toast.LENGTH_SHORT).show();
             startActivity(new Intent(MainActivity.this, RegisterActivity.class));
 
