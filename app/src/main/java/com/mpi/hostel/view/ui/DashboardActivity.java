@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -40,6 +41,27 @@ public class DashboardActivity extends AppCompatActivity {
             startActivity(new Intent(DashboardActivity.this,ExamResultActivity.class));
         });
 
+
+        //logout functionality
+        binding.logout.setOnClickListener(v->{
+            //delete sharedprefereces saved login data
+
+            SharedPreferences sharedPreferences2 = getSharedPreferences("login_pref", MODE_PRIVATE);
+            SharedPreferences.Editor editor = sharedPreferences2.edit();
+
+            // clear the stored values
+            editor.remove("USER_NAME");
+            editor.remove("USER_PHONE");
+            editor.remove("USER_ID");
+
+            // apply changes
+            editor.apply();
+
+            // navigate back to the login activity or perform any other desired action
+            startActivity(new Intent(DashboardActivity.this, LoginActivity.class));
+            finish();
+
+        });
 
     }
 }
