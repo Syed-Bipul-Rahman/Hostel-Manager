@@ -96,7 +96,7 @@
                 android:weightSum="2">
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/mealHistory"
+                    android:id="@+id/applyasStuent"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="15dp"
@@ -116,12 +116,12 @@
                         <ImageView
                             android:layout_width="50dp"
                             android:layout_height="50dp"
-                            android:src="@drawable/ic_baseline_history_24" />
+                            android:src="@drawable/appyicon" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Meal History"
+                            android:text="Apply"
                             android:textColor="@color/black" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
@@ -245,6 +245,8 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="15dp"
                     android:background="@drawable/bgcardhome"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
                     app:cardCornerRadius="7dp"
                     app:cardElevation="15dp">
 
@@ -252,8 +254,7 @@
                         android:layout_width="150dp"
                         android:layout_height="150dp"
                         android:layout_gravity="center"
-                        android:clickable="true"
-                        android:foreground="?android:attr/selectableItemBackground"
+
                         android:gravity="center"
                         android:orientation="vertical">
 
@@ -276,6 +277,8 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="15dp"
                     android:background="@drawable/bgcardhome"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
                     app:cardCornerRadius="7dp"
                     app:cardElevation="15dp">
 
@@ -283,8 +286,6 @@
                         android:layout_width="150dp"
                         android:layout_height="150dp"
                         android:layout_gravity="center"
-                        android:clickable="true"
-                        android:foreground="?android:attr/selectableItemBackground"
                         android:gravity="center"
                         android:orientation="vertical">
 

@@ -3,6 +3,7 @@ package com.mpi.hostel.view.ui;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -21,11 +22,9 @@ public class MainActivity extends AppCompatActivity {
 
 
         //sending to hostel info
-        binding.sentinfo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, HostelInfoActivity.class));
-            }
+        binding.sentinfo.setOnClickListener(v->{
+          //  Toast.makeText(this, "sending..", Toast.LENGTH_SHORT).show();
+            startActivity(new Intent(MainActivity.this, HostelInfoActivity.class));
         });
         //sending to studentllist
         binding.cardviewstudentlist.setOnClickListener(new View.OnClickListener() {
@@ -69,6 +68,20 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+//sending to about 
+        binding.aboutapp.setOnClickListener(v->{
+       //     Toast.makeText(this, "sending............", Toast.LENGTH_SHORT).show();
+            startActivity(new Intent(MainActivity.this, AboutDeveloperActivity.class));
+        
+        });
+
+        //navigate to register
+
+        binding.applyasStuent.setOnClickListener(v->{
+            //     Toast.makeText(this, "sending............", Toast.LENGTH_SHORT).show();
+            startActivity(new Intent(MainActivity.this, RegisterActivity.class));
+
+        });
 
     }
 

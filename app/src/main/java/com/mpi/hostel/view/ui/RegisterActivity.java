@@ -2,6 +2,9 @@ package com.mpi.hostel.view.ui;
 
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.text.InputFilter;
+import android.text.InputType;
+import android.text.method.DigitsKeyListener;
 import android.view.View;
 import android.widget.Toast;
 
@@ -49,6 +52,12 @@ public class RegisterActivity extends AppCompatActivity {
         alert.show();
 
         registerViewModel = new ViewModelProvider(this).get(RegisterUserViewModel.class);
+
+        // Apply input filter to allow only numbers and "-"
+        binding.registrationNo.setInputType(InputType.TYPE_CLASS_TEXT);
+        binding.registrationNo.setKeyListener(DigitsKeyListener.getInstance("0123456789-"));
+
+
         //register user
         binding.submitdataBtn.setOnClickListener(v -> {
             //get data from edit text
@@ -64,6 +73,7 @@ public class RegisterActivity extends AppCompatActivity {
             upazila = binding.upazila.getText().toString();
             session = binding.session.getText().toString();
             password = binding.password.getText().toString();
+
 
             //check if any field is empty
             if (name.isEmpty() || roll.isEmpty() || registration.isEmpty() || phone.isEmpty() || father.isEmpty() || fatherPhone.isEmpty() || mother.isEmpty() || dist.isEmpty() || upazila.isEmpty() || session.isEmpty() || password.isEmpty()) {

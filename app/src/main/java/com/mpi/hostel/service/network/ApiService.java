@@ -4,6 +4,7 @@ import com.mpi.hostel.service.model.AllAdmin;
 import com.mpi.hostel.service.model.AllNotice;
 import com.mpi.hostel.service.model.AllStudents;
 import com.mpi.hostel.service.model.LoginModel;
+import com.mpi.hostel.service.model.resultModel.AllResult;
 
 import retrofit2.Call;
 import retrofit2.http.Field;
@@ -14,7 +15,7 @@ import retrofit2.http.POST;
 public interface ApiService {
 
     //student list
-    @GET("all-students.php")
+    @GET("verifed-students.php")
     Call<AllStudents> getAllStudentsLists();
 
     //all notice
@@ -24,6 +25,10 @@ public interface ApiService {
     //all notice
     @GET("hall-admin.php")
     Call<AllAdmin> getAllAdmin();
+
+    //get result
+    @GET("individualResult?roll=476734&regulation=2016")
+    Call<AllResult> getAllResult();
 
 
     @FormUrlEncoded
@@ -47,3 +52,5 @@ public interface ApiService {
 
 
 }
+
+

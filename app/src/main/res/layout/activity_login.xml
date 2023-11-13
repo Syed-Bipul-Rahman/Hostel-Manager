@@ -67,7 +67,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginLeft="10dp"
-            android:text="Don't have a Account ? "
+            android:text="Not a Student ? "
             android:textSize="17sp" />
 
         <TextView
@@ -76,7 +76,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginLeft="15dp"
-            android:text="Register"
+            android:text="Apply Now"
             android:textColor="@color/purple_700"
             android:textSize="17sp"
             android:textStyle="bold" />

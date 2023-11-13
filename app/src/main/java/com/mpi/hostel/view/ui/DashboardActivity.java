@@ -1,5 +1,6 @@
 package com.mpi.hostel.view.ui;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
@@ -30,6 +31,14 @@ public class DashboardActivity extends AppCompatActivity {
 
         binding.username.setText(userName);
         binding.userPhone.setText(userPhone);
+
+
+
+        //navigate to Result activity
+
+        binding.viewResult.setOnClickListener(v->{
+            startActivity(new Intent(DashboardActivity.this,ExamResultActivity.class));
+        });
 
 
     }

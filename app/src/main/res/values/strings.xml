@@ -15,4 +15,11 @@
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
+
+    <string-array name="regulation">
+        <item>Regulation</item>
+        <item>2010</item>
+        <item>2016</item>
+        <item>2022</item>
+    </string-array>
 </resources>
