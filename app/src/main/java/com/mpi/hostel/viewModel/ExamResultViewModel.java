@@ -22,8 +22,8 @@ public class ExamResultViewModel extends AndroidViewModel {
 
     }
 
-    public LiveData<List<ResultDatum>> getAllResult() {
-        return allResultRepository.getResultList();
+    public LiveData<List<ResultDatum>> getAllResult(String roll, String regulation) {
+        return allResultRepository.getResultList("individualResult?roll=" + roll + "&regulation=" + regulation);
     }
 
 }

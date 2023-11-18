@@ -1,9 +1,10 @@
 package com.mpi.hostel.view.ui;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.mpi.hostel.R;
 
@@ -26,8 +27,18 @@ public class SplashScreenActivity extends AppCompatActivity {
                 } catch (Exception e) {
                     e.printStackTrace();
                 } finally {
-                    Intent intent = new Intent(SplashScreenActivity.this, MainActivity.class);
-                    startActivity(intent);
+                    //if already login or not
+
+                    //check user is already login or not
+                    SharedPreferences sharedPreferences = getSharedPreferences("login_pref", MODE_PRIVATE);
+                    String storedUserName = sharedPreferences.getString("USER_NAME", "");
+
+                    if (!storedUserName.isEmpty())
+                        startActivity(new Intent(SplashScreenActivity.this, MainActivity.class));
+                    else {
+                        startActivity(new Intent(SplashScreenActivity.this, LoginActivity.class));
+                    }
+
                     finish();
                 }
             }

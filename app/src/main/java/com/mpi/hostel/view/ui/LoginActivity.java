@@ -44,7 +44,7 @@ public class LoginActivity extends AppCompatActivity {
             String username = binding.username.getText().toString();
             String password = binding.password.getText().toString();
 
-            if (username.isEmpty()||password.isEmpty()){
+            if (username.isEmpty() || password.isEmpty()) {
                 binding.seterror.setVisibility(View.VISIBLE);
                 binding.loading.setVisibility(View.GONE);
                 return;
@@ -73,7 +73,7 @@ public class LoginActivity extends AppCompatActivity {
 
                         editor.apply();
                         //    Toast.makeText(this, ""+loginModel.getLoginData().getName(), Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(getApplicationContext(), DashboardActivity.class));
+                        startActivity(new Intent(getApplicationContext(), MainActivity.class));
                         // Remove the observer after successful login
                         loginLiveData.removeObservers(this);
                         finish();

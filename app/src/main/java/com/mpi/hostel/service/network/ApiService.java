@@ -11,6 +11,7 @@ import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
+import retrofit2.http.Url;
 
 public interface ApiService {
 
@@ -26,9 +27,14 @@ public interface ApiService {
     @GET("hall-admin.php")
     Call<AllAdmin> getAllAdmin();
 
-    //get result
-    @GET("individualResult?roll=476734&regulation=2016")
-    Call<AllResult> getAllResult();
+    //    get result
+//    @GET("individualResult?roll=476734&regulation=2016")
+//    Call<AllResult> getAllResult();
+
+
+    //dynamic url
+    @GET()
+    Call<AllResult> getAllResult(@Url String url);
 
 
     @FormUrlEncoded

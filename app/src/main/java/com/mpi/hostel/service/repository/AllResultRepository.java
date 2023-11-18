@@ -4,11 +4,8 @@ import android.content.Context;
 
 import androidx.lifecycle.MutableLiveData;
 
-import com.mpi.hostel.service.model.AllNotice;
-import com.mpi.hostel.service.model.Notice;
 import com.mpi.hostel.service.model.resultModel.AllResult;
 import com.mpi.hostel.service.model.resultModel.ResultDatum;
-import com.mpi.hostel.service.network.ApiClient;
 import com.mpi.hostel.service.network.ApiClient2;
 import com.mpi.hostel.service.network.ApiService;
 
@@ -35,13 +32,13 @@ public class AllResultRepository {
         return instance;
     }
 
-    public MutableLiveData<List<ResultDatum>> getResultList() {
+    public MutableLiveData<List<ResultDatum>> getResultList(String url) {
         if (mLiveData == null) {
             mLiveData = new MutableLiveData();
         }
 
         ApiService apiService = ApiClient2.getClient().create(ApiService.class);
-        Call<AllResult> call = apiService.getAllResult();
+        Call<AllResult> call = apiService.getAllResult(url);
         call.enqueue(new Callback<AllResult>() {
             @Override
             public void onResponse(Call<AllResult> call, Response<AllResult> response) {
@@ -57,7 +54,6 @@ public class AllResultRepository {
 
             }
         });
-
 
 
         return mLiveData;

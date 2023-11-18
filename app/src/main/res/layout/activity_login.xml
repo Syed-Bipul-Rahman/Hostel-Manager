@@ -76,7 +76,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginLeft="15dp"
-            android:text="Apply Now"
+            android:text="Register Now"
             android:textColor="@color/purple_700"
             android:textSize="17sp"
             android:textStyle="bold" />
