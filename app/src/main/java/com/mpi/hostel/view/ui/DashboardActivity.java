@@ -37,10 +37,10 @@ public class DashboardActivity extends AppCompatActivity {
 
         //navigate to Result activity
 
-        binding.viewResult.setOnClickListener(v->{
-            startActivity(new Intent(DashboardActivity.this,ExamResultActivity.class));
-        });
-
+//        binding.viewResult.setOnClickListener(v->{
+//            startActivity(new Intent(DashboardActivity.this,ExamResultActivity.class));
+//        });
+//
 
         //logout functionality
         binding.logout.setOnClickListener(v->{

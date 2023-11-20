@@ -22,9 +22,9 @@ public class MainActivity extends AppCompatActivity {
 
 
         //sending to hostel info
-        binding.sentinfo.setOnClickListener(v -> {
+        binding.viewResult.setOnClickListener(v -> {
             //  Toast.makeText(this, "sending..", Toast.LENGTH_SHORT).show();
-            startActivity(new Intent(MainActivity.this, HostelInfoActivity.class));
+            startActivity(new Intent(MainActivity.this, ExamResultActivity.class));
         });
         //sending to studentllist
         binding.cardviewstudentlist.setOnClickListener(new View.OnClickListener() {

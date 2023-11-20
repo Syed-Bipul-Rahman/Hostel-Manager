@@ -25,7 +25,6 @@ public class AllResult {
     @Expose
     private List<ResultDatum> resultData;
 
-
     public Boolean getSuccess() {
         return success;
     }

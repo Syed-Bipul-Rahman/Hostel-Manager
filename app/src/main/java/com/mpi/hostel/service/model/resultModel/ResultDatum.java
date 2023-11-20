@@ -18,7 +18,6 @@ public class ResultDatum {
     @Expose
     private Boolean passed;
 
-
     public PublishedAt getPublishedAt() {
         return publishedAt;
     }

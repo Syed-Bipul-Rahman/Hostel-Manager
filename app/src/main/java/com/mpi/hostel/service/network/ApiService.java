@@ -32,9 +32,14 @@ public interface ApiService {
 //    Call<AllResult> getAllResult();
 
 
-    //dynamic url
+    //dynamic url main
     @GET()
     Call<AllResult> getAllResult(@Url String url);
+
+
+//    //test
+//    @GET()
+//    Call<ApiResponse> getAllResult(@Url String url);
 
 
     @FormUrlEncoded
