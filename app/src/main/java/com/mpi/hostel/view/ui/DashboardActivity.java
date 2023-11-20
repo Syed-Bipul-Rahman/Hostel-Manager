@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -34,16 +33,19 @@ public class DashboardActivity extends AppCompatActivity {
         binding.userPhone.setText(userPhone);
 
 
+        //navigate to report activity
 
-        //navigate to Result activity
+        binding.submitReport.setOnClickListener(v -> {
+            startActivity(new Intent(DashboardActivity.this, SubmitReport.class));
+        });
+//navigate to meal coast
 
-//        binding.viewResult.setOnClickListener(v->{
-//            startActivity(new Intent(DashboardActivity.this,ExamResultActivity.class));
-//        });
-//
+        binding.mealCoast.setOnClickListener(v -> {
+            startActivity(new Intent(DashboardActivity.this, MealDetailsActivity.class));
+        });
 
         //logout functionality
-        binding.logout.setOnClickListener(v->{
+        binding.logout.setOnClickListener(v -> {
             //delete sharedprefereces saved login data
 
             SharedPreferences sharedPreferences2 = getSharedPreferences("login_pref", MODE_PRIVATE);

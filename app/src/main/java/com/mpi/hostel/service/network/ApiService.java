@@ -4,6 +4,7 @@ import com.mpi.hostel.service.model.AllAdmin;
 import com.mpi.hostel.service.model.AllNotice;
 import com.mpi.hostel.service.model.AllStudents;
 import com.mpi.hostel.service.model.LoginModel;
+import com.mpi.hostel.service.model.MealList;
 import com.mpi.hostel.service.model.resultModel.AllResult;
 
 import retrofit2.Call;
@@ -35,6 +36,9 @@ public interface ApiService {
     //dynamic url main
     @GET()
     Call<AllResult> getAllResult(@Url String url);
+
+    @GET("meal-coast.php")
+    Call<MealList> getMealList();
 
 
 //    //test
